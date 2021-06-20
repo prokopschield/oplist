@@ -17,15 +17,19 @@ export class OpList {
 			: []
 		);
 	}
-	add (entry: string) {
-		const entries = new Set(this.entries);
-		entries.add(entry);
-		this.write(entries);
+	add (...entries: string[]) {
+		const entry_set = new Set(this.entries);
+		for (const entry of entries) {
+			entry_set.add(entry);
+		}
+		this.write(entry_set);
 	}
-	remove (entry: string) {
-		const entries = new Set(this.entries);
-		entries.delete(entry);
-		this.write(entries);
+	remove (...entries: string[]) {
+		const entry_set = new Set(this.entries);
+		for (const entry of entries) {
+			entry_set.delete(entry);
+		}
+		this.write(entry_set);
 	}
 	write (list: Set<string>) {
 		const ar = [ ...list ].sort((a, b) => (
