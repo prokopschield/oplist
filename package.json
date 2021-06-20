@@ -1,6 +1,6 @@
 {
 	"name": "oplist",
-	"version": "0.0.0-2",
+	"version": "0.0.0-3",
 	"main": "lib/oplist.js",
 	"author": "Prokop Schield",
 	"license": "GPL-3.0-or-later",
