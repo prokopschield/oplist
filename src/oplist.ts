@@ -61,8 +61,10 @@ class OpList {
 		);
 		ar.push('');
 		const to_write = ar.join('\n');
-		const current = fs.readFileSync(this.__file, 'utf-8');
-		if (to_write !== current) {
+		if (
+			!fs.existsSync(this.__file) ||
+			to_write !== fs.readFileSync(this.__file, 'utf-8')
+		) {
 			fs.writeFileSync(this.__file, to_write);
 		}
 	}
@@ -76,13 +78,12 @@ class OpList {
 		const set = new Set(this.entries);
 		return new Proxy(set, {
 			get: (target, key, receiver) => {
-				setTimeout(() => {
-					self.write(set);
-				});
 				const real = (set as any)[key];
 				if (real) {
 					return function () {
-						return real.apply(set, arguments);
+						const ret = real.apply(set, arguments);
+						self.write(set);
+						return ret;
 					};
 				} else return undefined;
 			},
