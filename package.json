@@ -1,6 +1,6 @@
 {
 	"name": "oplist",
-	"version": "0.0.0-3",
+	"version": "0.0.0-4",
 	"main": "lib/oplist.js",
 	"author": "Prokop Schield",
 	"license": "GPL-3.0-or-later",
@@ -10,6 +10,6 @@
 	"keywords": [],
 	"description": "",
 	"dependencies": {
-		"doge-json": "*"
+		"doge-json": "^1.1.1"
 	}
 }
