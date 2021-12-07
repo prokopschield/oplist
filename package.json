@@ -1,15 +1,30 @@
 {
 	"name": "oplist",
+	"description": "Manage list files, such as .gitignore",
 	"version": "0.0.0-5",
 	"main": "lib/oplist.js",
+	"bin": {
+		"oplist": "lib/cli.js"
+	},
 	"author": "Prokop Schield",
 	"license": "GPL-3.0-or-later",
 	"devDependencies": {
 		"@types/node": ">=14"
 	},
 	"keywords": [],
-	"description": "",
 	"dependencies": {
 		"doge-json": "^1.1.2"
-	}
+	},
+	"directories": {
+		"lib": "lib",
+		"test": "tests"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/prokopschield/oplist.git"
+	},
+	"bugs": {
+		"url": "https://github.com/prokopschield/oplist/issues"
+	},
+	"homepage": "https://github.com/prokopschield/oplist#readme"
 }
