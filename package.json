@@ -1,7 +1,7 @@
 {
 	"name": "oplist",
 	"description": "Manage list files, such as .gitignore",
-	"version": "0.0.0-6",
+	"version": "0.0.0-7",
 	"main": "lib/oplist.js",
 	"bin": {
 		"oplist": "lib/cli.js"
@@ -13,7 +13,7 @@
 	},
 	"keywords": [],
 	"dependencies": {
-		"doge-json": "^1.1.2"
+		"doge-json": "^1.2.6"
 	},
 	"directories": {
 		"lib": "lib",

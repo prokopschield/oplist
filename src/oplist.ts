@@ -19,7 +19,8 @@ class OpList {
 	get entries(): string[] {
 		return fs.existsSync(this.__file)
 			? fs
-					.readFileSync(this.__file, 'utf-8')
+					.readFileSync(this.__file)
+					.toString()
 					.split(line_break_regex)
 					.map((a) => a.trim())
 					.filter((a) => a && a[0] !== '#')
@@ -63,7 +64,7 @@ class OpList {
 		const to_write = ar.join('\n');
 		if (
 			!fs.existsSync(this.__file) ||
-			to_write !== fs.readFileSync(this.__file, 'utf-8')
+			to_write !== fs.readFileSync(this.__file).toString()
 		) {
 			fs.writeFileSync(this.__file, to_write);
 		}
