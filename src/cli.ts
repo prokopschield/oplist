@@ -22,7 +22,7 @@ for (const arg of process.argv.slice(2)) {
 	} else if (!mode && arg === 'add') {
 		mode = '+';
 	} else if (!mode && (arg === 'rem' || arg === 'remove')) {
-		mode = '+';
+		mode = '-';
 	} else if (oplist) {
 		proc(arg);
 	}
