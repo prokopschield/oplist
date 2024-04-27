@@ -1,7 +1,7 @@
 {
 	"name": "oplist",
 	"description": "Manage list files, such as .gitignore",
-	"version": "0.0.0-7",
+	"version": "0.0.0-8",
 	"main": "lib/oplist.js",
 	"bin": {
 		"oplist": "lib/cli.js"
